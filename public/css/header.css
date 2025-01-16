@@ -1,0 +1,164 @@
+/* Header Styles */
+.navbar {
+    background-color: #ffe8e0;
+    padding: 1rem 0;
+    box-shadow: none;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    line-height: 1;
+    padding: 0.6rem 1rem;
+    border: 3px solid #000;
+    margin-left: 0;
+}
+
+.navbar-brand span {
+    display: block;
+}
+
+.navbar-brand .and {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin: 0.1rem 0;
+}
+
+.navbar-brand:hover {
+    text-decoration: none;
+    color: #000;
+    background-color: rgba(0,0,0,0.05);
+}
+
+.navbar .container {
+    max-width: 100%;
+    padding: 0 2rem;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-nav .nav-link {
+    color: #000;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 1.6rem;
+    margin: 0;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.nav-link .circle::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 25px;
+    border: 2px solid;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: transform 0.4s ease, opacity 1.5s ease;
+}
+
+.nav-link:active .circle::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.nav-link.clicked .circle::before {
+    animation: circleEffect 2s ease forwards;
+}
+
+@keyframes circleEffect {
+    0% {
+      opacity: 0;
+      transform: scale(1.2);
+    }
+    20% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    80% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.2);
+    }
+}
+
+/* Menu - Orange/Coral theme */
+.navbar-nav .nav-item:nth-child(1) .nav-link .circle::before {
+  border-color: #ff6b6b;
+}
+
+/* About - Purple theme */
+.navbar-nav .nav-item:nth-child(2) .nav-link .circle::before {
+  border-color: #9b59b6;
+}
+
+/* Resources - Green theme */
+.navbar-nav .nav-item:nth-child(3) .nav-link .circle::before {
+  border-color: #27ae60;
+}
+
+/* Contact - Blue theme */
+.navbar-nav .nav-item:nth-child(4) .nav-link .circle::before {
+  border-color: #3498db;
+}
+
+/* Menu - Orange/Coral theme */
+.navbar-nav .nav-item:nth-child(1) .nav-link:hover,
+.navbar-nav .nav-item:nth-child(1) .nav-link:active,
+.navbar-nav .nav-item:nth-child(1) .nav-link.active {
+  color: #ff6b6b;
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+/* About - Purple theme */
+.navbar-nav .nav-item:nth-child(2) .nav-link:hover,
+.navbar-nav .nav-item:nth-child(2) .nav-link:active,
+.navbar-nav .nav-item:nth-child(2) .nav-link.active {
+  color: #9b59b6;
+  background-color: rgba(155, 89, 182, 0.1);
+}
+
+/* Resources - Green theme */
+.navbar-nav .nav-item:nth-child(3) .nav-link:hover,
+.navbar-nav .nav-item:nth-child(3) .nav-link:active,
+.navbar-nav .nav-item:nth-child(3) .nav-link.active {
+  color: #27ae60;
+  background-color: rgba(39, 174, 96, 0.1);
+}
+
+/* Contact - Blue theme */
+.navbar-nav .nav-item:nth-child(4) .nav-link:hover,
+.navbar-nav .nav-item:nth-child(4) .nav-link:active,
+.navbar-nav .nav-item:nth-child(4) .nav-link.active {
+  color: #3498db;
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+.navbar-nav .nav-link:active {
+  transform: scale(0.97);
+  transition-duration: 0.8s;
+}

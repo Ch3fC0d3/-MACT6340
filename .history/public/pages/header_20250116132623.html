@@ -1,0 +1,229 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffe8e0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.navbar {
+  background-color: #ffe8e0;
+  padding: 0.5rem 0;
+  box-shadow: none;
+}
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  line-height: 0.8;
+  padding: 0.4rem;
+  border: 2px solid #000;
+}
+.navbar-brand span {
+  display: block;
+}
+.navbar-brand .and {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin: 0.05rem 0;
+}
+.navbar-brand:hover {
+  text-decoration: none;
+  color: #000;
+}
+.navbar-nav {
+  margin-left: auto;
+  display: flex;
+  gap: 1.5rem;
+}
+.navbar-nav .nav-link {
+  color: #000;
+  font-weight: 500;
+  padding: 0.4rem 1.4rem;
+  margin: 0;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 1rem;
+}
+
+.nav-link .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.nav-link .circle::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 25px;
+  border: 2px solid;
+  opacity: 0;
+  transform: scale(1.2);
+  transition: transform 0.4s ease, opacity 1.5s ease;
+}
+
+.nav-link:active .circle::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.nav-link.clicked .circle::before {
+  animation: circleEffect 2s ease forwards;
+}
+
+@keyframes circleEffect {
+  0% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+/* Menu - Orange/Coral theme */
+.navbar-nav .nav-item:nth-child(1) .nav-link .circle::before {
+  border-color: #ff6b6b;
+}
+
+/* About - Purple theme */
+.navbar-nav .nav-item:nth-child(2) .nav-link .circle::before {
+  border-color: #9b59b6;
+}
+
+/* Resources - Green theme */
+.navbar-nav .nav-item:nth-child(3) .nav-link .circle::before {
+  border-color: #27ae60;
+}
+
+/* Contact - Blue theme */
+.navbar-nav .nav-item:nth-child(4) .nav-link .circle::before {
+  border-color: #3498db;
+}
+
+/* Menu - Orange/Coral theme */
+.navbar-nav .nav-item:nth-child(1) .nav-link:hover,
+.navbar-nav .nav-item:nth-child(1) .nav-link:active,
+.navbar-nav .nav-item:nth-child(1) .nav-link.active {
+  color: #ff6b6b;
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+/* About - Purple theme */
+.navbar-nav .nav-item:nth-child(2) .nav-link:hover,
+.navbar-nav .nav-item:nth-child(2) .nav-link:active,
+.navbar-nav .nav-item:nth-child(2) .nav-link.active {
+  color: #9b59b6;
+  background-color: rgba(155, 89, 182, 0.1);
+}
+
+/* Resources - Green theme */
+.navbar-nav .nav-item:nth-child(3) .nav-link:hover,
+.navbar-nav .nav-item:nth-child(3) .nav-link:active,
+.navbar-nav .nav-item:nth-child(3) .nav-link.active {
+  color: #27ae60;
+  background-color: rgba(39, 174, 96, 0.1);
+}
+
+/* Contact - Blue theme */
+.navbar-nav .nav-item:nth-child(4) .nav-link:hover,
+.navbar-nav .nav-item:nth-child(4) .nav-link:active,
+.navbar-nav .nav-item:nth-child(4) .nav-link.active {
+  color: #3498db;
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+.navbar-nav .nav-link:active {
+  transform: scale(0.97);
+  transition-duration: 0.8s;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 1.5rem 0;
+    width: 100%;
+    margin-top: auto;
+}
+.footer h5 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.footer p {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+.social-links {
+    margin: 0.5rem 0;
+}
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <span>Butter</span>
+      <span class="and">and</span>
+      <span>Bytes</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#menu">Menu<span class="circle"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About<span class="circle"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#resources">Resources<span class="circle"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact<span class="circle"></span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Add scroll effect to navbar
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
+<script>
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      this.classList.add('clicked');
+      setTimeout(() => {
+        this.classList.remove('clicked');
+      }, 2000);
+    });
+  });
+</script>

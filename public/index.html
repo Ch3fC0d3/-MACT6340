@@ -6,41 +6,21 @@
   <title>Butter and Bytes</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* Add placeholder square styles */
-    .placeholder-square {
-      width: 100%;
-      height: 500px;
-      margin: 8rem auto 3rem auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 25%;
-    }
-    .placeholder-square iframe {
-      width: 100%;
-      max-width: 600px;
-      height: 100%;
-      border: none;
-      background-color: #fff;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    }
-    .main-content {
-      min-height: 2000px;
-      padding: 80px 0 4rem 0;
-    }
-  </style>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
- <!-- Header container -->
-<div id="header-container"></div>
+  <!-- Header container -->
+  <div id="header-container"></div>
 
   <!-- Main Content Sections -->
   <main class="main-content">
     <div class="container">
       <!-- Placeholder Square with Favela iframe -->
       <div class="placeholder-square">
-        <iframe src="public/pages/Favela.html" title="Favela Project"></iframe>
+        <iframe src="pages/Favela.html" title="Favela Project"></iframe>
       </div>
     </div>
   </main>
@@ -48,18 +28,18 @@
   <!-- Footer -->
   <div id="footer-container"></div>
 
-  <!-- Bootstrap JS -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     // Load header
-    fetch('public/pages/header.html')
+    fetch('pages/header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-container').innerHTML = data;
       });
 
     // Load footer
-    fetch('public/pages/footer.html')
+    fetch('pages/footer.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('footer-container').innerHTML = data;
