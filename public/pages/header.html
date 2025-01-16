@@ -1,6 +1,15 @@
 <!-- Start of header.html -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffe8e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
     .navbar {
         background-color: #ffe8e0;
         padding: 0.5rem 0;
@@ -77,78 +86,80 @@
 
     @keyframes circleEffect {
         0% {
-            opacity: 0;
-            transform: scale(1.2);
+          opacity: 0;
+          transform: scale(1.2);
         }
         20% {
-            opacity: 1;
-            transform: scale(1);
+          opacity: 1;
+          transform: scale(1);
         }
         80% {
-            opacity: 1;
-            transform: scale(1);
+          opacity: 1;
+          transform: scale(1);
         }
         100% {
-            opacity: 0;
-            transform: scale(1.2);
+          opacity: 0;
+          transform: scale(1.2);
         }
     }
 
     /* Menu - Orange/Coral theme */
     .navbar-nav .nav-item:nth-child(1) .nav-link .circle::before {
-        border-color: #ff6b6b;
+      border-color: #ff6b6b;
     }
 
     /* About - Purple theme */
     .navbar-nav .nav-item:nth-child(2) .nav-link .circle::before {
-        border-color: #9b59b6;
+      border-color: #9b59b6;
     }
 
     /* Resources - Green theme */
     .navbar-nav .nav-item:nth-child(3) .nav-link .circle::before {
-        border-color: #27ae60;
+      border-color: #27ae60;
     }
 
     /* Contact - Blue theme */
     .navbar-nav .nav-item:nth-child(4) .nav-link .circle::before {
-        border-color: #3498db;
+      border-color: #3498db;
     }
 
+    /* Menu - Orange/Coral theme */
     .navbar-nav .nav-item:nth-child(1) .nav-link:hover,
     .navbar-nav .nav-item:nth-child(1) .nav-link:active,
     .navbar-nav .nav-item:nth-child(1) .nav-link.active {
-        color: #ff6b6b;
-        background-color: rgba(255, 107, 107, 0.1);
+      color: #ff6b6b;
+      background-color: rgba(255, 107, 107, 0.1);
     }
 
+    /* About - Purple theme */
     .navbar-nav .nav-item:nth-child(2) .nav-link:hover,
     .navbar-nav .nav-item:nth-child(2) .nav-link:active,
     .navbar-nav .nav-item:nth-child(2) .nav-link.active {
-        color: #9b59b6;
-        background-color: rgba(155, 89, 182, 0.1);
+      color: #9b59b6;
+      background-color: rgba(155, 89, 182, 0.1);
     }
 
+    /* Resources - Green theme */
     .navbar-nav .nav-item:nth-child(3) .nav-link:hover,
     .navbar-nav .nav-item:nth-child(3) .nav-link:active,
     .navbar-nav .nav-item:nth-child(3) .nav-link.active {
-        color: #27ae60;
-        background-color: rgba(39, 174, 96, 0.1);
+      color: #27ae60;
+      background-color: rgba(39, 174, 96, 0.1);
     }
 
+    /* Contact - Blue theme */
     .navbar-nav .nav-item:nth-child(4) .nav-link:hover,
     .navbar-nav .nav-item:nth-child(4) .nav-link:active,
     .navbar-nav .nav-item:nth-child(4) .nav-link.active {
-        color: #3498db;
-        background-color: rgba(52, 152, 219, 0.1);
+      color: #3498db;
+      background-color: rgba(52, 152, 219, 0.1);
     }
 
     .navbar-nav .nav-link:active {
-        transform: scale(0.97);
-        transition-duration: 0.8s;
+      transform: scale(0.97);
+      transition-duration: 0.8s;
     }
 </style>
-
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
         <a class="navbar-brand" href="#">
@@ -178,13 +189,4 @@
     </div>
 </nav>
 
-<!-- Header Section -->
-<header class="bg-primary text-white text-center py-5">
-    <div class="container">
-        <h1 class="display-4">Gabriel Pellegrini</h1>
-        <p class="lead">Creative Technologist | Software Engineer | Culinary Innovator</p>
-        <p>Fusing technology, art, and culinary expertise to craft unforgettable experiences.</p>
-        <a href="#projects" class="btn btn-outline-light btn-lg mt-3">View My Work</a>
-    </div>
-</header>
 <!-- End of header.html -->
