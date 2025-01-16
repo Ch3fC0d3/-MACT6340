@@ -1,0 +1,110 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #ffe8e0;
+    padding: 0.5rem 0;
+    box-shadow: none;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    line-height: 0.8;
+    padding: 0.4rem;
+    border: 2px solid #000;
+}
+
+.navbar-brand span {
+    display: block;
+}
+
+.navbar-brand .and {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin: 0.05rem 0;
+}
+
+.navbar-brand:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #000;
+    font-weight: 500;
+    padding: 0.4rem 1.4rem;
+    margin: 0;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 1rem;
+}
+
+.nav-link .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.nav-link .circle::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 25px;
+    border: 2px solid;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: transform 0.4s ease, opacity 1.5s ease;
+}
+
+.nav-link:active .circle::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.nav-link.clicked .circle::before {
+    animation: circleEffect 2s ease forwards;
+}
+
+@keyframes circleEffect {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    20% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        background: #ffe8e0;
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+        gap: 0.8rem;
+    }
+}
